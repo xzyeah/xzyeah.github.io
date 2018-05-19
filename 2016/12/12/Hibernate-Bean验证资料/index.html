@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zane.Xie">
+
+
+
+<meta name="description" content="官方文档提供的验证注解及说明">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hibernate-BeanValidate参考手册">
+<meta property="og:url" content="http://blog.codesay.top/2016/12/12/Hibernate-Bean验证资料/index.html">
+<meta property="og:site_name" content="Zane`s Blog 随心记录">
+<meta property="og:description" content="官方文档提供的验证注解及说明">
+<meta property="og:updated_time" content="2018-05-19T02:40:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hibernate-BeanValidate参考手册">
+<meta name="twitter:description" content="官方文档提供的验证注解及说明">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Zane`s Blog 随心记录" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Hibernate-BeanValidate参考手册 | Zane`s Blog 随心记录</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zane.Xie</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:xzyeah@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BeanValidate/">BeanValidate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitLab/">GitLab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PL-SQL/">PL/SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cron/">cron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python2/">python2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python3/">python3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代码质量/">代码质量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/后台校验/">后台校验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统设计/">系统设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计/">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/重构/">重构</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zane.Xie</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zane.Xie</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:xzyeah@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-Hibernate-Bean验证资料" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/12/Hibernate-Bean验证资料/" class="article-date">
+      <time datetime="2016-12-12T10:07:30.000Z" itemprop="datePublished">2016-12-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      Hibernate-BeanValidate参考手册
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/BeanValidate/">BeanValidate</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BeanValidate/">BeanValidate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台校验/">后台校验</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="官方文档提供的验证注解及说明"><a href="#官方文档提供的验证注解及说明" class="headerlink" title="官方文档提供的验证注解及说明"></a>官方文档提供的验证注解及说明</h3><a id="more"></a>
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>适用的数据类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@AssertTrue</td>
+<td>Boolean, boolean</td>
+<td>验证注解的元素值是true</td>
+</tr>
+<tr>
+<td>@DecimalMax（value=x）</td>
+<td>BigDecimal, BigInteger, String, byte,short, int, long and the respective wrappers of the primitive types. Additionally supported by HV: any sub-type of Number andCharSequence.</td>
+<td>验证注解的元素值小于等于@ DecimalMax指定的value值</td>
+</tr>
+<tr>
+<td>@DecimalMin（value=x）</td>
+<td>BigDecimal, BigInteger, String, byte,short, int, long and the respective wrappers of the primitive types. Additionally supported by HV: any sub-type of Number andCharSequence.</td>
+<td>验证注解的元素值小于等于@ DecimalMin指定的value值</td>
+</tr>
+<tr>
+<td>@Digits(integer=整数位数, fraction=小数位数)</td>
+<td>BigDecimal, BigInteger, String, byte,short, int, long and the respective wrappers of the primitive types. Additionally supported by HV: any sub-type of Number andCharSequence.</td>
+<td>验证注解的元素值的整数位数和小数位数上限</td>
+</tr>
+<tr>
+<td>@Future</td>
+<td>java.util.Date, java.util.Calendar; Additionally supported by HV, if theJoda Time date/time API is on the class path: any implementations ofReadablePartial andReadableInstant.</td>
+<td>验证注解的元素值（日期类型）比当前时间晚</td>
+</tr>
+<tr>
+<td>@Max（value=x）</td>
+<td>BigDecimal, BigInteger, byte, short,int, long and the respective wrappers of the primitive types. Additionally supported by HV: any sub-type ofCharSequence (the numeric value represented by the character sequence is evaluated), any sub-type of Number.</td>
+<td>验证注解的元素值小于等于@Max指定的value值</td>
+</tr>
+<tr>
+<td>@Min（value=x）</td>
+<td>BigDecimal, BigInteger, byte, short,int, long and the respective wrappers of the primitive types. Additionally supported by HV: any sub-type of CharSequence (the numeric value represented by the char sequence is evaluated), any sub-type of Number.</td>
+<td>验证注解的元素值大于等于@Min指定的value值</td>
+</tr>
+<tr>
+<td>@NotNull</td>
+<td>Any type</td>
+<td>验证注解的元素值不是null</td>
+</tr>
+<tr>
+<td>@Null</td>
+<td>Any type</td>
+<td>验证注解的元素值是null</td>
+</tr>
+<tr>
+<td>@Past</td>
+<td>java.util.Date, java.util.Calendar; Additionally supported by HV, if theJoda Time date/time API is on the class path: any implementations ofReadablePartial andReadableInstant.</td>
+<td>验证注解的元素值（日期类型）比当前时间早</td>
+</tr>
+<tr>
+<td>@Pattern(regex=正则表达式, flag=)</td>
+<td>String. Additionally supported by HV: any sub-type of CharSequence.</td>
+<td>验证注解的元素值与指定的正则表达式匹配</td>
+</tr>
+<tr>
+<td>@Size(min=最小值, max=最大值)</td>
+<td>String, Collection, Map and arrays. Additionally supported by HV: any sub-type of CharSequence.</td>
+<td>验证注解的元素值的在min和max（包含）指定区间之内，如字符长度、集合大小</td>
+</tr>
+<tr>
+<td>@Valid</td>
+<td>Any non-primitive type（引用类型）</td>
+<td>验证关联的对象，如账户对象里有一个订单对象，指定验证订单对象</td>
+</tr>
+<tr>
+<td>@NotEmpty</td>
+<td>CharSequence,Collection, Map and Arrays</td>
+<td>验证注解的元素值不为null且不为空（字符串长度不为0、集合大小不为0）</td>
+</tr>
+<tr>
+<td>@Range(min=最小值, max=最大值)</td>
+<td>CharSequence, Collection, Map and Arrays,BigDecimal, BigInteger, CharSequence, byte, short, int, long and the respective wrappers of the primitive types</td>
+<td>验证注解的元素值在最小值和最大值之间</td>
+</tr>
+<tr>
+<td>@NotBlank</td>
+<td>CharSequence</td>
+<td>验证注解的元素值不为空（不为null、去除首位空格后长度为0），不同于@NotEmpty，@NotBlank只应用于字符串且在比较时会去除字符串的空格</td>
+</tr>
+<tr>
+<td>@Length(min=下限, max=上限)</td>
+<td>CharSequence</td>
+<td>验证注解的元素值长度在min和max区间内</td>
+</tr>
+<tr>
+<td>@Email</td>
+<td>CharSequence</td>
+<td>验证注解的元素值是Email，也可以通过正则表达式和flag指定自定义的email格式</td>
+</tr>
+</tbody>
+</table>
+<h3 id="常用校验示例"><a href="#常用校验示例" class="headerlink" title="常用校验示例"></a>常用校验示例</h3><p>空校验<br>@NotEmpty(message = “用户名不能为空”, groups = EditGroup.class)</p>
+<p>邮箱校验<br>@Email(message=”邮箱格式不正确”)</p>
+<p>长度校验<br>@Length(min=0, max=200, message=”邮箱长度必须介于 1 和 200 之间”)</p>
+<p>@Min (value= 18 ,message= “必须年满18岁！” )  </p>
+<p>@Max (value= 30 ,message= “年龄不能大于30岁！” )  </p>
+<p>@NotBlank(message=”名字不能为空或者空串”)</p>
+<p>@Past(message=”时间不能晚于当前时间”)</p>
+<p> @Size (max= 11 ,min= 11 ,message= “长度只能为11位！” )  </p>
+<p>@Pattern(regexp=”/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{5,10}$/“,message=”密码必须是5~10位数字和字母的组合”)</p>
+<h3 id="日期格式化注解"><a href="#日期格式化注解" class="headerlink" title="日期格式化注解"></a>日期格式化注解</h3><p>@JsonFormat(pattern = “yyyy-MM-dd HH:mm:ss”)</p>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/12/12/Hibernate-Bean验证资料/">Hibernate-BeanValidate参考手册</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zane.Xie</a></p>
+        <p><span>发布时间:</span>2016-12-12, 18:07:30</p>
+        <p><span>最后更新:</span>2018-05-19, 10:40:04</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/12/12/Hibernate-Bean验证资料/" title="Hibernate-BeanValidate参考手册">http://blog.codesay.top/2016/12/12/Hibernate-Bean验证资料/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.codesay.top/2016/12/12/Hibernate-Bean验证资料/　　作者: Zane.Xie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/01/12/Git环境搭建及使用指南/">
+                    Git环境搭建及使用指南
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/11/15/PLSQL入门指南/">
+                    PL/SQL入门
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#官方文档提供的验证注解及说明"><span class="toc-number">1.</span> <span class="toc-text">官方文档提供的验证注解及说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用校验示例"><span class="toc-number">2.</span> <span class="toc-text">常用校验示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#日期格式化注解"><span class="toc-number">3.</span> <span class="toc-text">日期格式化注解</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Hibernate-BeanValidate参考手册　| Zane`s Blog 随心记录　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/01/12/Git环境搭建及使用指南/" title="上一篇: Git环境搭建及使用指南">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/11/15/PLSQL入门指南/" title="下一篇: PL/SQL入门">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/28/aliyun-linux-cron任务执行问题解决过程记录与思考/">aliyun linux cron任务执行问题解决过程记录与思考</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/03/python2安装/">python2安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/03/python3安装/">python3安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/31/系统（功能）设计的一些思考——方法篇/">系统（功能）设计的一些思考——方法篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/系统（功能）设计的一些思考——问题篇/">系统（功能）设计的一些思考——问题篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/gitflow应用规范说明/">git flow应用规范说明</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/设计模式之单例模式/">设计模式之单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/14/架构设计原则概述/">架构设计原则概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/15/关于代码质量的思考和重构/">关于代码质量的思考和重构</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/redis集群相关概念/">redis集群笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/28/Hexo-Intensify/">(转载)搭建 Hexo 博客--增强篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/28/Hexo/">(转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/14/git-ssh-config/">Git ssh配置操作指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/12/Git环境搭建及使用指南/">Git环境搭建及使用指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/Hibernate-Bean验证资料/">Hibernate-BeanValidate参考手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/PLSQL入门指南/">PL/SQL入门</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 Zane.Xie
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+<script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

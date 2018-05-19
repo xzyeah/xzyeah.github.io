@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zane.Xie">
+
+
+
+<meta name="description" content="Git环境搭建及使用指南1、Git简介Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git与SVN最大的区别就是，Git是分布式的，绝大多数操作都只需要访问本地文件和资源，不用连网，而SVN差不多所有操作都需要连接网络，所以Git处理的速度也要快很多。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git环境搭建及使用指南">
+<meta property="og:url" content="http://blog.codesay.top/2017/01/12/Git环境搭建及使用指南/index.html">
+<meta property="og:site_name" content="Zane`s Blog 随心记录">
+<meta property="og:description" content="Git环境搭建及使用指南1、Git简介Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git与SVN最大的区别就是，Git是分布式的，绝大多数操作都只需要访问本地文件和资源，不用连网，而SVN差不多所有操作都需要连接网络，所以Git处理的速度也要快很多。">
+<meta property="og:image" content="http://172.21.1.54/uploads/root/qr-document-project/c59ba1963a/image.png">
+<meta property="og:updated_time" content="2018-05-19T02:40:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git环境搭建及使用指南">
+<meta name="twitter:description" content="Git环境搭建及使用指南1、Git简介Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git与SVN最大的区别就是，Git是分布式的，绝大多数操作都只需要访问本地文件和资源，不用连网，而SVN差不多所有操作都需要连接网络，所以Git处理的速度也要快很多。">
+<meta name="twitter:image" content="http://172.21.1.54/uploads/root/qr-document-project/c59ba1963a/image.png">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Zane`s Blog 随心记录" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Git环境搭建及使用指南 | Zane`s Blog 随心记录</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zane.Xie</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:xzyeah@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BeanValidate/">BeanValidate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitLab/">GitLab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PL-SQL/">PL/SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cron/">cron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python2/">python2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python3/">python3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代码质量/">代码质量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/后台校验/">后台校验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统设计/">系统设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计/">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/重构/">重构</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zane.Xie</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zane.Xie</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:xzyeah@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-Git环境搭建及使用指南" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/12/Git环境搭建及使用指南/" class="article-date">
+      <time datetime="2017-01-12T02:07:30.000Z" itemprop="datePublished">2017-01-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      Git环境搭建及使用指南
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/版本控制/">版本控制</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitLab/">GitLab</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Git环境搭建及使用指南"><a href="#Git环境搭建及使用指南" class="headerlink" title="Git环境搭建及使用指南"></a>Git环境搭建及使用指南</h2><h3 id="1、Git简介"><a href="#1、Git简介" class="headerlink" title="1、Git简介"></a>1、Git简介</h3><p>Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git与SVN最大的区别就是，Git是分布式的，绝大多数操作都只需要访问本地文件和资源，不用连网，而SVN差不多所有操作都需要连接网络，所以Git处理的速度也要快很多。</p>
+<a id="more"></a>
+<h3 id="2、Git服务器–GitLab"><a href="#2、Git服务器–GitLab" class="headerlink" title="2、Git服务器–GitLab"></a>2、Git服务器–GitLab</h3><blockquote>
+<p>GitLab一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的web服务。</p>
+</blockquote>
+<p>Git服务器比较有名的是gitosis和gitolite，这两个管理和使用起来稍微有些复杂，没有web页面，而gitlab则是类似于github的一个工具，github无法免费建立私有仓库，并且为了代码安全，于是需要在内网安装一个git服务器，多方比较，选择了gitlab，gitlab有很多依赖，而bitnami制作了<a href="https://bitnami.com/stack/gitlab/installer#" target="_blank" rel="external">一键安装</a>的包 ，使得安装非常简洁。<a href="https://wiki.bitnami.com/Applications/BitNami_GitLab#How_to_start.2fstop_the_servers.3" target="_blank" rel="external">Bitnami GitLab Wiki</a></p>
+<h2 id="3、Git客户端"><a href="#3、Git客户端" class="headerlink" title="3、Git客户端"></a>3、Git客户端</h2><p>Git的客户端目前应该至少有四种:</p>
+<ul>
+<li><a href="http://msysgit.github.io/" target="_blank" rel="external">msysqit</a> – 有图形界面，还带了一个命令行界面（Git Bash） （命令行比较推荐这款）</li>
+<li><a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a> –图形化管理工具 （图形工具推荐这款，代码比较工具使用BeyoundCompare） , 入门基础：<a href="http://www.jianshu.com/p/be9f0484af9d" target="_blank" rel="external">http://www.jianshu.com/p/be9f0484af9d</a></li>
+<li>Git Extensions</li>
+<li><a href="http://download.tortoisegit.org/" target="_blank" rel="external">TortoiseGit</a> –用惯了TortoiseSVN的可以使用这一款，但是界面上面的功能还是没有命令行的全面和灵活</li>
+</ul>
+<h2 id="4、Git的使用"><a href="#4、Git的使用" class="headerlink" title="4、Git的使用"></a>4、Git的使用</h2><p> (1) <a href="git-ssh-config">初始环境配置</a></p>
+<p> (2) Git的基本命令</p>
+<ul>
+<li><a href="#git-clone">git clone</a>                #工程克隆</li>
+<li><a href="#git-status">git status</a>               #查看文件缓存状态</li>
+<li><a href="#git-add">git add</a>         #添加至暂存区</li>
+<li><a href="#git-reset">git reset</a>          #取消缓存修改(还原)</li>
+<li><a href="#git-diff">git diff </a>                   #文件比较</li>
+<li><a href="#git-checkout">git checkout </a>         #放弃文件修改</li>
+<li><a href="#git-commit">git commit</a>             #提交本地仓库</li>
+<li><p><a href="#git-log">git log</a>           #查看提交日志</p>
+<p>远程操作命令:</p>
+</li>
+<li><p><a href="#git-remote">git remote</a>          #列出远程别名</p>
+</li>
+<li><a href="#git-fetch">git fetch</a>             #从远程仓库下载代码</li>
+<li><a href="#git-pull">git pull</a>              #从远程仓库下载代码并合并 相当于(git fetch + git merge)</li>
+<li><a href="#git-push">git push</a>          #向远程仓库推送代码</li>
+</ul>
+<p>操作图如下：</p>
+<p><img src="http://172.21.1.54/uploads/root/qr-document-project/c59ba1963a/image.png" alt="image"></p>
+<h4 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a><strong>git clone</strong></h4><blockquote>
+<p>从git服务器上面克隆项目到本地目录</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://github.com/schacon/simplegit.git</span><br><span class="line">Initialized empty Git repository <span class="keyword">in</span> /private/tmp/simplegit/.git/</span><br><span class="line">remote: Counting objects: 100, <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (86/86), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 100 (delta 35), reused 0 (delta 0)</span><br><span class="line">Receiving objects: 100% (100/100), 9.51 KiB, <span class="keyword">done</span>.</span><br><span class="line">Resolving deltas: 100% (35/35), <span class="keyword">done</span>.</span><br><span class="line">$ <span class="built_in">cd</span> simplegit/</span><br><span class="line">$ ls</span><br><span class="line">README   Rakefile lib</span><br></pre></td></tr></table></figure>
+<h4 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a><strong>git status</strong></h4><blockquote>
+<p>查看你的代码在缓存与当前工作目录的状态</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line"># On branch master</span><br><span class="line">#</span><br><span class="line"># Initial commit</span><br><span class="line">#</span><br><span class="line"># Changes to be committed:</span><br><span class="line">#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span><br><span class="line">#</span><br><span class="line"># new file:   README</span><br><span class="line"># new file:   hello.rb</span><br><span class="line">#</span><br><span class="line"># Changed but not updated:</span><br><span class="line">#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line">#</span><br><span class="line"># modified:   README</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
+<p>git status 查看的状态有两种颜色，绿色表示的是在缓存区的修改的文件，红色表示的是当前修改的文件</p>
+<p>加上 -s 参数可以以简短的形式输出，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">AM README</span><br><span class="line">A  hello.rb</span><br></pre></td></tr></table></figure></p>
+<p><code>一言以蔽之，执行 git status 以查看在你上次提交之后有啥被修改或者临时提交了， 从而决定自己是否需要提交一次快照，同时也能知道有什么改变被记录进去了。</code></p>
+<h4 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a><strong>git add</strong></h4><blockquote>
+<p>添加文件到缓存</p>
+</blockquote>
+<p>有两种情况需要执行git add 将文件添加至缓存</p>
+<ul>
+<li>1、在git commit 提交你修改的文件之前，你需要先执行git add 将文件添加至缓存。如果执行git commit -a -m ‘’就可以跳过缓存直接提交修改的文件</li>
+<li>2、对于新增加的文件，必须先执行git add将文件添加至缓存，才能提交。如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">?? README</span><br><span class="line">?? hello.rb</span><br></pre></td></tr></table></figure>
+<p>我们有俩尚未被追踪的文件，得添加一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add README hello.rb</span><br></pre></td></tr></table></figure></p>
+<p>现在我们再执行 git status，就可以看到这俩文件已经加上去了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.rb</span><br></pre></td></tr></table></figure>
+<p>新项目中，添加所有文件很普遍，可以在当前工作目录执行命令：git add .。 因为 Git 会递归地将你执行命令时所在的目录中的所有文件添加上去，所以如果你将当前的工作目录作为参数， 它就会追踪那儿的所有文件了。如此，git add . 就和 git add README hello.rb 有一样的效果。 此外，效果一致的还有 git add *，不过那只是因为我们这还木有子目录，不需要递归地添加新文件。</p>
+<h4 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a><strong>git reset</strong></h4><blockquote>
+<p>取消缓存已缓存的内容</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line"> M README</span><br><span class="line"> M hello.rb</span><br><span class="line">$ git add .</span><br><span class="line">$ git status -s</span><br><span class="line">M  README</span><br><span class="line">M  hello.rb</span><br><span class="line">$ git reset HEAD -- hello.rb </span><br><span class="line">Unstaged changes after reset:</span><br><span class="line">M hello.rb</span><br><span class="line">$ git status -s</span><br><span class="line">M  README</span><br><span class="line"> M hello.rb</span><br></pre></td></tr></table></figure>
+<p>实际的操作是将该文件在“索引”中的校验和重置为最近一次提交中的值。 git add 会计算一个文件的校验和，将它添加到“索引”中， 而 git reset HEAD 将它改写回原先的，从而取消缓存操作。</p>
+<h4 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff "></a><strong>git diff </strong></h4><blockquote>
+<p> 显示已写入缓存与已修改但尚未写入缓存的改动的区别</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git diff #尚未缓存的改动</span><br><span class="line">git diff --cached #查看已缓存的改动</span><br><span class="line">git diff HEAD 查看已缓存的与未缓存的所有改动</span><br><span class="line">git diff --stat 显示摘要而非整个 diff</span><br></pre></td></tr></table></figure>
+<p>如果只比较某个文件，将文件的路径及文件名称加在命令之后即可，如： git diff README</p>
+<h4 id="git-checkout"><a href="#git-checkout" class="headerlink" title="git checkout"></a><strong>git checkout</strong></h4><p>有两个作用:</p>
+<ul>
+<li>(1) 切换分支</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch (branchname) 创建新分支</span><br><span class="line">$ git checkout -b (branchname) 创建新分支，并立即切换到它</span><br><span class="line">$ git branch -d (branchname) 删除分支</span><br></pre></td></tr></table></figure>
+<ul>
+<li>(1) 丢弃刚修改的内容<br>如果你刚修改的一些文件，还没有git add 也没有 提交，需要还原到没修改的时候的状态，则可以执行git checkout (filename) 来还原。</li>
+</ul>
+<h4 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a><strong>git commit</strong></h4><blockquote>
+<p>记录缓存内容的快照，将内容提交到本地仓库</p>
+</blockquote>
+<p>现在你使用 git add 命令将想要快照的内容写入了缓存， 执行 git commit 就将它实际存储快照了。 Git 为你的每一个提交都记录你的名字与电子邮箱地址，所以第一步是告诉 Git 这些都是啥。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &apos;Your Name&apos;</span><br><span class="line">$ git config --global user.email you@somedomain.com</span><br></pre></td></tr></table></figure>
+<p>让我们写入缓存，并提交对 hello.rb 的所有改动。在首个例子中，我们使用 -m 选项以在命令行中提供提交注释。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git add hello.rb </span><br><span class="line">$ git status -s</span><br><span class="line">M  hello.rb</span><br><span class="line">$ git commit -m &apos;my hola mundo changes&apos;</span><br><span class="line">[master 68aa034] my hola mundo changes</span><br><span class="line"> 1 files changed, 2 insertions(+), 1 deletions(-)</span><br></pre></td></tr></table></figure>
+<p>在执行 git status 查看状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line"># On branch master</span><br><span class="line">nothing to commit (working directory clean)</span><br></pre></td></tr></table></figure>
+<p>跳过 git add ,直接自动提交，则执行 git commit -a </p>
+<h4 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a><strong>git log</strong></h4><blockquote>
+<p>查看提交日志</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br><span class="line">git log --author 只寻找某个特定作者的提交</span><br><span class="line">git log (filename)</span><br></pre></td></tr></table></figure>
+<h4 id="git-remote"><a href="#git-remote" class="headerlink" title="git remote"></a><strong>git remote</strong></h4><blockquote>
+<p>列出远程别名</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git remote</span><br><span class="line">origin</span><br><span class="line">$ git remote -v</span><br><span class="line">origin	git@github.com:github/git-reference.git (fetch)</span><br><span class="line">origin	git@github.com:github/git-reference.git (push)</span><br></pre></td></tr></table></figure>
+<p>创建新的远程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git remote</span><br><span class="line">$ git remote add github git@github.com:schacon/hw.git</span><br><span class="line">$ git remote -v</span><br><span class="line">github	git@github.com:schacon/hw.git (fetch)</span><br><span class="line">github	git@github.com:schacon/hw.git (push)</span><br></pre></td></tr></table></figure>
+<p>删除远程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm 删除现存的某个别名</span><br></pre></td></tr></table></figure>
+<p>修改远程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote set-url origin git@github.com:someaccount/someproject.git</span><br></pre></td></tr></table></figure>
+<h4 id="git-fetch"><a href="#git-fetch" class="headerlink" title="git fetch"></a><strong>git fetch</strong></h4><blockquote>
+<p>从远程仓库下载代码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch origin</span><br></pre></td></tr></table></figure>
+<h4 id="git-pull"><a href="#git-pull" class="headerlink" title="git pull"></a><strong>git pull</strong></h4><blockquote>
+<p>从远程仓库下载代码并合并 相当于(git fetch + git merge)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin master #相当于git fetch之后git merge合并</span><br></pre></td></tr></table></figure>
+<h4 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a><strong>git push</strong></h4><blockquote>
+<p>向远程仓库推送代码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master #推送你的master分支与数据到远端仓库</span><br><span class="line">$ git push origin master （省略了&lt;dst&gt;，等价于“git push origin master:master”）</span><br><span class="line">$ git push origin branch1 #推送分支到远程</span><br><span class="line">$ git push origin :branch1 （再origin repository里面查找branch1，删除它。用一个空的去更新它，就相当于删除了）</span><br></pre></td></tr></table></figure>
+<p>更多详细的命令使用说明，请参考：<a href="http://gitref.org/zh/creating/#init" target="_blank" rel="external">Git中文参考手册</a></p>
+<p>网上的一些GIT及workflow教程参考：</p>
+<ul>
+<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></li>
+<li><a href="https://segmentfault.com/a/1190000002918123#articleHeader11" target="_blank" rel="external">https://segmentfault.com/a/1190000002918123#articleHeader11</a></li>
+<li><a href="http://blog.jobbole.com/76867/" target="_blank" rel="external">http://blog.jobbole.com/76867/</a></li>
+</ul>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/01/12/Git环境搭建及使用指南/">Git环境搭建及使用指南</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zane.Xie</a></p>
+        <p><span>发布时间:</span>2017-01-12, 10:07:30</p>
+        <p><span>最后更新:</span>2018-05-19, 10:40:04</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/01/12/Git环境搭建及使用指南/" title="Git环境搭建及使用指南">http://blog.codesay.top/2017/01/12/Git环境搭建及使用指南/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.codesay.top/2017/01/12/Git环境搭建及使用指南/　　作者: Zane.Xie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/01/14/git-ssh-config/">
+                    Git ssh配置操作指南
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/12/12/Hibernate-Bean验证资料/">
+                    Hibernate-BeanValidate参考手册
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git环境搭建及使用指南"><span class="toc-number">1.</span> <span class="toc-text">Git环境搭建及使用指南</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Git简介"><span class="toc-number">1.1.</span> <span class="toc-text">1、Git简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Git服务器–GitLab"><span class="toc-number">1.2.</span> <span class="toc-text">2、Git服务器–GitLab</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、Git客户端"><span class="toc-number">2.</span> <span class="toc-text">3、Git客户端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、Git的使用"><span class="toc-number">3.</span> <span class="toc-text">4、Git的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#git-clone"><span class="toc-number">3.0.1.</span> <span class="toc-text">git clone</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-status"><span class="toc-number">3.0.2.</span> <span class="toc-text">git status</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-add"><span class="toc-number">3.0.3.</span> <span class="toc-text">git add</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-reset"><span class="toc-number">3.0.4.</span> <span class="toc-text">git reset</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-diff"><span class="toc-number">3.0.5.</span> <span class="toc-text">git diff </span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-checkout"><span class="toc-number">3.0.6.</span> <span class="toc-text">git checkout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-commit"><span class="toc-number">3.0.7.</span> <span class="toc-text">git commit</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-log"><span class="toc-number">3.0.8.</span> <span class="toc-text">git log</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-remote"><span class="toc-number">3.0.9.</span> <span class="toc-text">git remote</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-fetch"><span class="toc-number">3.0.10.</span> <span class="toc-text">git fetch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-pull"><span class="toc-number">3.0.11.</span> <span class="toc-text">git pull</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-push"><span class="toc-number">3.0.12.</span> <span class="toc-text">git push</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Git环境搭建及使用指南　| Zane`s Blog 随心记录　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/01/14/git-ssh-config/" title="上一篇: Git ssh配置操作指南">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/12/12/Hibernate-Bean验证资料/" title="下一篇: Hibernate-BeanValidate参考手册">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/28/aliyun-linux-cron任务执行问题解决过程记录与思考/">aliyun linux cron任务执行问题解决过程记录与思考</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/03/python2安装/">python2安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/03/python3安装/">python3安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/31/系统（功能）设计的一些思考——方法篇/">系统（功能）设计的一些思考——方法篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/系统（功能）设计的一些思考——问题篇/">系统（功能）设计的一些思考——问题篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/gitflow应用规范说明/">git flow应用规范说明</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/设计模式之单例模式/">设计模式之单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/14/架构设计原则概述/">架构设计原则概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/15/关于代码质量的思考和重构/">关于代码质量的思考和重构</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/redis集群相关概念/">redis集群笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/28/Hexo-Intensify/">(转载)搭建 Hexo 博客--增强篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/28/Hexo/">(转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/14/git-ssh-config/">Git ssh配置操作指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/12/Git环境搭建及使用指南/">Git环境搭建及使用指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/Hibernate-Bean验证资料/">Hibernate-BeanValidate参考手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/PLSQL入门指南/">PL/SQL入门</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 Zane.Xie
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+<script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

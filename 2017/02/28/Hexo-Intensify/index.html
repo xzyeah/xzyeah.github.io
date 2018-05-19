@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zane.Xie">
+
+
+
+<meta name="description" content="本文将讲解 Hexo 博客的常用插件、站点 SEO 等内容！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(转载)搭建 Hexo 博客--增强篇">
+<meta property="og:url" content="http://blog.codesay.top/2017/02/28/Hexo-Intensify/index.html">
+<meta property="og:site_name" content="Zane`s Blog 随心记录">
+<meta property="og:description" content="本文将讲解 Hexo 博客的常用插件、站点 SEO 等内容！">
+<meta property="og:updated_time" content="2018-05-19T02:40:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(转载)搭建 Hexo 博客--增强篇">
+<meta name="twitter:description" content="本文将讲解 Hexo 博客的常用插件、站点 SEO 等内容！">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Zane`s Blog 随心记录" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>(转载)搭建 Hexo 博客--增强篇 | Zane`s Blog 随心记录</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zane.Xie</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:xzyeah@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BeanValidate/">BeanValidate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitLab/">GitLab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PL-SQL/">PL/SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cron/">cron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python2/">python2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python3/">python3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代码质量/">代码质量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/后台校验/">后台校验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统设计/">系统设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计/">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/重构/">重构</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zane.Xie</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zane.Xie</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:xzyeah@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-Hexo-Intensify" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/28/Hexo-Intensify/" class="article-date">
+      <time datetime="2017-02-28T10:10:27.000Z" itemprop="datePublished">2017-02-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      (转载)搭建 Hexo 博客--增强篇
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a><a class="article-category-link" href="/categories/Hexo/转载/">转载</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<h2 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a>主题优化</h2><h3 id="主题配置介绍"><a href="#主题配置介绍" class="headerlink" title="主题配置介绍"></a>主题配置介绍</h3><p>我这里只讲自己在使用的 yelle 主题，你可以参考下，可能还有一些改动我后续会自己在慢慢改，但是大体基本也就这样了。</p>
+<p>从中我们也可以看出，对于主题来讲，大部分可以配置的地方其实都是在这里的，所以对于主题的使用者来讲，懂这里很重要。</p>
+<ul>
+<li>基本上主题的配置文件都是有内容改，但是下面这几点我觉得特别重要：</li>
+<li><code>duoshuo</code>，如果你是打算采用多说评论系统的话，你需要设置这里，但是我个人对多说没好印象</li>
+<li><code>youyan</code>，有言也是国内实用比较多的评论系统之一，个人感觉相对比较稳定</li>
+<li><code>open_in_new</code>，我个人觉得这个东西就应该是 true，不是用新标签的都是坏人</li>
+<li><code>baidu_tongji</code>，我个人使用的是百度统计，具体百度统计的使用可以查看百度统计官网：<a href="http://tongji.baidu.com" target="_blank" rel="external">http://tongji.baidu.com</a></li>
+</ul>
+<h3 id="我的-yelle-主题配置"><a href="#我的-yelle-主题配置" class="headerlink" title="我的 yelle 主题配置"></a>我的 yelle 主题配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># &gt;&gt;&gt; Basic Setup | 基础设置 &lt;&lt;&lt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Header | 主菜单</span></span><br><span class="line"><span class="comment">## About Page: `hexo new page about`</span></span><br><span class="line"><span class="comment">## Tags Cloud Page: `hexo new page tags`</span></span><br><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  关于我: /about/</span><br><span class="line">  标签云: /tags/</span><br><span class="line">  所有文章: /archives/</span><br><span class="line">  IntelliJ IDEA: /tags/IntelliJ IDEA</span><br><span class="line"></span><br><span class="line"><span class="comment"># Link to your avatar | 填写头像地址</span></span><br><span class="line">avatar: /img/avatar.png</span><br><span class="line"></span><br><span class="line"><span class="comment"># Small icon of Your site | 站点小图标地址</span></span><br><span class="line">favicon: /favicon.png</span><br><span class="line"></span><br><span class="line"><span class="comment"># If your site' url is 'http://yoursite.com/blog', set root_url as '/blog/'</span></span><br><span class="line"><span class="comment"># 网站若存放在子目录，请按上面格式填写</span></span><br><span class="line"><span class="comment"># https://hexo.io/docs/configuration.html#URL</span></span><br><span class="line">root_url: </span><br><span class="line"></span><br><span class="line"><span class="comment"># Social info. Bar | 社交信息展示</span></span><br><span class="line"><span class="comment">## Keep "mailto:" in Email | 设置 Email 时保留 "mailto:"</span></span><br><span class="line"><span class="comment">## Encrypt email 加密邮件地址 http://ctrlq.org/encode/</span></span><br><span class="line"><span class="comment">## RSS requires a plugin to take effect | 使用 RSS 需先安装对应插件</span></span><br><span class="line"><span class="comment">## https://github.com/hexojs/hexo-generator-feed</span></span><br><span class="line"></span><br><span class="line">subnav:</span><br><span class="line">  Email: <span class="string">"mailto:judas.n@qq.com"</span></span><br><span class="line">  <span class="comment">#新浪微博: "sina weibo"</span></span><br><span class="line">  GitHub: <span class="string">"https://github.com/judasn/IntelliJ-IDEA-Tutorial"</span></span><br><span class="line">  RSS: <span class="string">"/atom.xml"</span></span><br><span class="line">  <span class="comment">#V2EX: "#"</span></span><br><span class="line">  <span class="comment">#知乎: "zhihu"</span></span><br><span class="line">  <span class="comment">#豆瓣: "douban"</span></span><br><span class="line">  <span class="comment">#简书: "jianshu"</span></span><br><span class="line">  <span class="comment">#SegmentFault: ""</span></span><br><span class="line">  <span class="comment">#网易云音乐: "netease"</span></span><br><span class="line">  <span class="comment">#虾米音乐: "xiami"</span></span><br><span class="line">  <span class="comment">#Facebook: "#"</span></span><br><span class="line">  <span class="comment">#Google: "#"</span></span><br><span class="line">  <span class="comment">#Twitter: "#"</span></span><br><span class="line">  <span class="comment">#LinkedIn: "#"</span></span><br><span class="line">  <span class="comment">#QQ: "#"</span></span><br><span class="line">  <span class="comment">#微信: "Wechat"</span></span><br><span class="line">  <span class="comment">#PayPal: "#"</span></span><br><span class="line">  <span class="comment">#StackOverflow: "#"</span></span><br><span class="line">  <span class="comment">#Instagram: "#"</span></span><br><span class="line">  <span class="comment">#Flickr: "#"</span></span><br><span class="line">  <span class="comment">#reddit: ""</span></span><br><span class="line">  <span class="comment">#Medium: ""</span></span><br><span class="line">  <span class="comment">#TiddlyWiki: ""</span></span><br><span class="line">  <span class="comment">#Tumblr: ""</span></span><br><span class="line">  <span class="comment">#_500px: ""</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &gt;&gt;&gt; Conments 评论系统 &lt;&lt;&lt;</span></span><br><span class="line"><span class="comment"># Chose ONE as your comment system and keep others disable.</span></span><br><span class="line"><span class="comment"># 选一个作为网站评论系统，其他保持禁用。</span></span><br><span class="line"></span><br><span class="line">disqus: </span><br><span class="line">  <span class="comment">#on: true</span></span><br><span class="line">  shortname: </span><br><span class="line">  <span class="comment"># https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-</span></span><br><span class="line">  <span class="comment"># It is unnecessary to enable disqus here if </span></span><br><span class="line">  <span class="comment"># you have set "disqus_shortname" in your site's "_config.yml" </span></span><br><span class="line"></span><br><span class="line">duoshuo: </span><br><span class="line">  <span class="comment">#on: true</span></span><br><span class="line">  domain: </span><br><span class="line">  <span class="comment"># 是否开启多说评论，http://duoshuo.com/create-site/</span></span><br><span class="line">  <span class="comment"># 使用上面网址登陆你的多说，然后创建站点，在 domain 中填入你设定的域名前半部分</span></span><br><span class="line">  <span class="comment"># http://&lt;要填的部分&gt;.duoshuo.com (domain只填上&lt;&gt;里的内容，不要填整个网址)</span></span><br><span class="line"></span><br><span class="line">youyan:</span><br><span class="line">  on: <span class="literal">true</span></span><br><span class="line">  id: 1738968</span><br><span class="line">  <span class="comment"># 是否开启友言评论，http://www.uyan.cc/index.php</span></span><br><span class="line">  <span class="comment"># id 中填写你的友言用户数字ID，注册后进入后台管理即可查看</span></span><br><span class="line">  <span class="comment"># 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># &gt;&gt;&gt; Style Customisation 样式自定义 &lt;&lt;&lt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Background | 背景</span></span><br><span class="line"><span class="comment">## "5": show images form bg-1.jpg to bg-5.jpg in `/yelee/source/background/`</span></span><br><span class="line"><span class="comment">## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片</span></span><br><span class="line"><span class="comment">## "0": white-gray background | 淳朴灰白背景</span></span><br><span class="line">background_image: 0</span><br><span class="line"></span><br><span class="line">highlight_style:</span><br><span class="line">  on: <span class="literal">true</span></span><br><span class="line">  inline_code: 3  <span class="comment"># Value: 0 - 9 可选，3还不错</span></span><br><span class="line">  code_block: 2  <span class="comment"># Value: 0 - 4 </span></span><br><span class="line">  <span class="comment"># Set inline_code to style highlight text</span></span><br><span class="line">  <span class="comment"># Chose a highlight theme for code block</span></span><br><span class="line">  <span class="comment"># 通过 inline_code 切换内置文本高亮样式</span></span><br><span class="line">  <span class="comment"># 通过 code_block 切换内置代码高亮配色主题</span></span><br><span class="line"></span><br><span class="line">blockquote_style:</span><br><span class="line">  on: <span class="literal">true</span></span><br><span class="line">  blockquote: 3  <span class="comment"># Value: 0 - 7 可选</span></span><br><span class="line">  <span class="comment"># 自定义文章「引用部分」的样式</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 左边栏宽度 px</span></span><br><span class="line">left_col_width: 330</span><br><span class="line"></span><br><span class="line"><span class="comment"># Copyright info. of post | 文末版权信息</span></span><br><span class="line">copyright: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Table of contents | 文章目录</span></span><br><span class="line">toc: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 目录中标题不换行</span></span><br><span class="line"><span class="comment"># Keep TOC title on the same line | </span></span><br><span class="line">toc_nowrap: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 自定义"阅读全文"链接按钮的显示文字</span></span><br><span class="line"><span class="comment"># Customize the text on excerpt link</span></span><br><span class="line">excerpt_link: more</span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否显示边栏中的搜索框（仅样式，未添加搜索功能）</span></span><br><span class="line"><span class="comment"># Search Box in left column</span></span><br><span class="line">search_box: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否开启主页及加载头像时的动画效果</span></span><br><span class="line"><span class="comment"># Animation in Homepage and Loading avatar</span></span><br><span class="line">animate: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Load jQuery UI to style tooltips</span></span><br><span class="line"><span class="comment"># 工具提示框样式美化</span></span><br><span class="line">jquery_ui: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &gt;&gt;&gt; Small features | 小功能设置 &lt;&lt;&lt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否开启边栏多标签切换</span></span><br><span class="line"><span class="comment"># Birdhouse button in left column</span></span><br><span class="line">tagcloud: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Blogroll, Link exchange | 友情链接</span></span><br><span class="line">friends:</span><br><span class="line">  YouMeek: http://www.YouMeek.com</span><br><span class="line">  YouMeek导航: http://i.YouMeek.com</span><br><span class="line">  GitHub: https://github.com/</span><br><span class="line">  IntelliJ IDEA: http://www.jetbrains.com/idea/</span><br><span class="line"><span class="comment">#friends: false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#是否开启“关于我”。</span></span><br><span class="line">aboutme: 此地只专注于技术</span><br><span class="line"><span class="comment">#aboutme: true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否在新窗口打开链接</span></span><br><span class="line"><span class="comment"># Open ALL link in a new tab</span></span><br><span class="line">open_in_new: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Customize feed link 自定义订阅地址</span></span><br><span class="line">rss: /atom.xml</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># &gt;&gt;&gt; Vendors | 第三方工具 &amp; 服务 &lt;&lt;&lt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># images viewer | 图片浏览器</span></span><br><span class="line"><span class="comment">## http://www.fancyapps.com/fancybox/</span></span><br><span class="line">fancybox: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Display Math(LaTeX, MathML...) | 数学公式支持</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org/</span></span><br><span class="line">mathjax: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Socail Share | 是否开启分享</span></span><br><span class="line">share: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 百度、谷歌站长验证。填写 HTML 标签 content</span></span><br><span class="line"><span class="comment"># Site Verification for Google and Baidu. HTML label content.</span></span><br><span class="line">baidu_site: </span><br><span class="line">google_site: </span><br><span class="line"></span><br><span class="line"><span class="comment"># Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X</span></span><br><span class="line">google_analytics: </span><br><span class="line"></span><br><span class="line"><span class="comment"># 百度统计 http://sitecenter.baidu.com/sc-web/</span></span><br><span class="line"><span class="comment"># 查看代码，填入 //hm.baidu.com/hm.js? 之后的内容</span></span><br><span class="line">baidu_tongji: b68dade9d355a0b3d875d0ffbbe1f212</span><br><span class="line"></span><br><span class="line"><span class="comment"># 不蒜子网站计数设置</span></span><br><span class="line"><span class="comment"># http://ibruce.info/2015/04/04/busuanzi/</span></span><br><span class="line">visit_counter:</span><br><span class="line">  on: <span class="literal">true</span></span><br><span class="line">  site_visit: 本站到访数</span><br><span class="line">  page_visit: 本页阅读量</span><br><span class="line"></span><br><span class="line"><span class="comment"># GitHub Repo Widget</span></span><br><span class="line"><span class="comment"># https://github.com/hustcc/GitHub-Repo-Widget.js</span></span><br><span class="line">github_widget: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="常用页面添加"><a href="#常用页面添加" class="headerlink" title="常用页面添加"></a>常用页面添加</h2><h3 id="404、关于我、标签页"><a href="#404、关于我、标签页" class="headerlink" title="404、关于我、标签页"></a>404、关于我、标签页</h3><ul>
+<li>还是以上一篇文章我们讲解的项目根目录上：E:\git_work_space\hexo，在该目录启动 Git Bash：</li>
+<li>新增一个 404 页面：<code>hexo new page 404</code></li>
+<li>新增一个 about 页面：<code>hexo new page about</code></li>
+<li>新增一个 tag 标签云页面：<code>hexo new page tags</code></li>
+<li>新增一个 robot.txt 文件，把该文件放在：E:\git_work_space\hexo\source 目录下，如果你没有该文件可以到我的项目上找：<a href="https://github.com/judasn/judasn.github.io" target="_blank" rel="external">https://github.com/judasn/judasn.github.io</a></li>
+<li>robot 文件内容：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">User-Agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Disallow: /background</span><br><span class="line">Disallow: /css</span><br><span class="line">Disallow: /fancybox</span><br><span class="line">Disallow: /font-awesome</span><br><span class="line">Disallow: /img</span><br><span class="line">Disallow: /js</span><br><span class="line">Sitemap: http://code.youmeek.com/sitemap.xml</span><br><span class="line">Sitemap: http://code.youmeek.com/baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<h3 id="置顶文章方法"><a href="#置顶文章方法" class="headerlink" title="置顶文章方法"></a>置顶文章方法</h3><ul>
+<li>参考：<a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="external">解决Hexo置顶问题</a></li>
+<li>编辑这个文件：<code>node_modules/hexo-generator-index/lib/generator.js</code></li>
+<li>覆盖原文件内容，采用下面内容：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'use strict'</span>;</span><br><span class="line"></span><br><span class="line">var pagination = require(<span class="string">'hexo-pagination'</span>);</span><br><span class="line"></span><br><span class="line">module.exports = <span class="keyword">function</span>(locals)&#123;</span><br><span class="line">  var config = this.config;</span><br><span class="line">  var posts = locals.posts;</span><br><span class="line"></span><br><span class="line">    posts.data = posts.data.sort(<span class="keyword">function</span>(a, b) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; // 两篇文章top都有定义</span><br><span class="line">            <span class="keyword">if</span>(a.top == b.top) <span class="built_in">return</span> b.date - a.date; // 若top值一样则按照文章日期降序排</span><br><span class="line">            <span class="keyword">else</span> <span class="built_in">return</span> b.top - a.top; // 否则按照top值降序排</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123; // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">            <span class="built_in">return</span> -1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">            <span class="built_in">return</span> 1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">return</span> b.date - a.date; // 都没定义按照文章日期降序排</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">  var paginationDir = config.pagination_dir || <span class="string">'page'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> pagination(<span class="string">''</span>, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [<span class="string">'index'</span>, <span class="string">'archive'</span>],</span><br><span class="line">    format: paginationDir + <span class="string">'/%d/'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后在文章头部的：Front-matter 位置加上一个：<code>top: 1000</code> 的内容。数值越大，越靠前</li>
+</ul>
+<h2 id="添加一些不希望被渲染的文件到-hexo"><a href="#添加一些不希望被渲染的文件到-hexo" class="headerlink" title="添加一些不希望被渲染的文件到 hexo"></a>添加一些不希望被渲染的文件到 hexo</h2><ul>
+<li><p>因为我们使用的是 Github 项目做空间，所以一般项目我们都要放一个 README.md 文件，而我们希望这个文件不被 hexo 渲染成 HTML 文件，我们需要这样做：</p>
+<ul>
+<li>把 README.md 放在这个目录下：<code>hexo\source\README.md</code></li>
+<li>编辑这个配置文件：<code>hexo\_config.yml</code>，找到这个关键字：<code>skip_render</code>，然后这样写：<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">skip_render: </span><br><span class="line">     - README.md</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>有时候我们需要排除一整个目录，道理跟上面一样，比如你现在访问：<a href="http://code.YouMeek.com/i" target="_blank" rel="external">http://code.YouMeek.com/i</a>，你发现会跑到我的一个备份导航中，而我是通过这样配置来实现的：</p>
+<ul>
+<li>这里的 <code>i</code> 是我的目录名称，因为我的真正导航地址是：<a href="http://i.YouMeek.com" target="_blank" rel="external">http://i.YouMeek.com</a>，所以取这样的目录名字方便记忆。</li>
+<li>而 <code>i/**</code> 这里的后缀的两个星号表示这个目录下包括子目录，其所有文件都被忽略渲染。</li>
+<li>对于一些 HTML 和 CSS、JS 这类也要注意，hexo 有一套自己的渲染方式，比如可能会对你的 JS 做一些特殊处理，所以可能会让你的 JS 失效，所以最好按我这种方式来排除掉。<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">skip_render: </span><br><span class="line">  - README.md</span><br><span class="line">  - i/**</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><h3 id="插件的基本使用命令"><a href="#插件的基本使用命令" class="headerlink" title="插件的基本使用命令"></a>插件的基本使用命令</h3><ul>
+<li>插件官网：<a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a></li>
+<li>安装插件：<code>npm install 插件名 --save</code></li>
+<li>卸载插件：<code>npm uninstall 插件名</code></li>
+<li>更新插件和博客框架（需要在 E:\git_work_space\hexo 目录下）：<code>npm update</code><ul>
+<li>它实质上是通过项目根目录下 package.json 文件更新各大组件</li>
+</ul>
+</li>
+</ul>
+<h3 id="必备插件"><a href="#必备插件" class="headerlink" title="必备插件"></a>必备插件</h3><ul>
+<li>支持RSS：<code>npm install hexo-generator-feed --save</code></li>
+<li>生成站点地图：<code>npm install hexo-generator-sitemap --save</code></li>
+<li>生成百度站点地图：<code>npm install hexo-generator-baidu-sitemap --save</code></li>
+<li>HTML 压缩：<code>npm install hexo-html-minifier --save</code></li>
+<li>JavaScript 压缩：<code>npm install hexo-uglify --save</code></li>
+<li>CSS 压缩插件：<code>npm install hexo-clean-css --save</code></li>
+<li>SEO优化：<code>npm install hexo-generator-seo-friendly-sitemap --save</code></li>
+<li>搜索支持，需要主题有对应的设置：<code>npm install hexo-generator-search --save</code></li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+<li>真心希望这是 Hexo 最后一篇，因为我们只是要安心写东西而已，不需要太多折腾。</li>
+</ul>
+<ul>
+<li>转自：<a href="http://code.youmeek.com/2016/02/29/2016/02/Hexo-Intensify/" target="_blank" rel="external">http://code.youmeek.com/2016/02/29/2016/02/Hexo-Intensify/</a></li>
+</ul>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/02/28/Hexo-Intensify/">(转载)搭建 Hexo 博客--增强篇</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zane.Xie</a></p>
+        <p><span>发布时间:</span>2017-02-28, 18:10:27</p>
+        <p><span>最后更新:</span>2018-05-19, 10:40:04</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/02/28/Hexo-Intensify/" title="(转载)搭建 Hexo 博客--增强篇">http://blog.codesay.top/2017/02/28/Hexo-Intensify/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.codesay.top/2017/02/28/Hexo-Intensify/　　作者: Zane.Xie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/03/15/redis集群相关概念/">
+                    redis集群笔记
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/02/28/Hexo/">
+                    (转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#主题优化"><span class="toc-number">1.</span> <span class="toc-text">主题优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主题配置介绍"><span class="toc-number">1.1.</span> <span class="toc-text">主题配置介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#我的-yelle-主题配置"><span class="toc-number">1.2.</span> <span class="toc-text">我的 yelle 主题配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用页面添加"><span class="toc-number">2.</span> <span class="toc-text">常用页面添加</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#404、关于我、标签页"><span class="toc-number">2.1.</span> <span class="toc-text">404、关于我、标签页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#置顶文章方法"><span class="toc-number">2.2.</span> <span class="toc-text">置顶文章方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加一些不希望被渲染的文件到-hexo"><span class="toc-number">3.</span> <span class="toc-text">添加一些不希望被渲染的文件到 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插件推荐"><span class="toc-number">4.</span> <span class="toc-text">插件推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#插件的基本使用命令"><span class="toc-number">4.1.</span> <span class="toc-text">插件的基本使用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#必备插件"><span class="toc-number">4.2.</span> <span class="toc-text">必备插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">5.</span> <span class="toc-text">结束语</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"(转载)搭建 Hexo 博客--增强篇　| Zane`s Blog 随心记录　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/03/15/redis集群相关概念/" title="上一篇: redis集群笔记">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/02/28/Hexo/" title="下一篇: (转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/28/aliyun-linux-cron任务执行问题解决过程记录与思考/">aliyun linux cron任务执行问题解决过程记录与思考</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/03/python2安装/">python2安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/03/python3安装/">python3安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/31/系统（功能）设计的一些思考——方法篇/">系统（功能）设计的一些思考——方法篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/系统（功能）设计的一些思考——问题篇/">系统（功能）设计的一些思考——问题篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/gitflow应用规范说明/">git flow应用规范说明</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/设计模式之单例模式/">设计模式之单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/14/架构设计原则概述/">架构设计原则概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/15/关于代码质量的思考和重构/">关于代码质量的思考和重构</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/redis集群相关概念/">redis集群笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/28/Hexo-Intensify/">(转载)搭建 Hexo 博客--增强篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/28/Hexo/">(转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/14/git-ssh-config/">Git ssh配置操作指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/12/Git环境搭建及使用指南/">Git环境搭建及使用指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/Hibernate-Bean验证资料/">Hibernate-BeanValidate参考手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/PLSQL入门指南/">PL/SQL入门</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 Zane.Xie
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+<script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>

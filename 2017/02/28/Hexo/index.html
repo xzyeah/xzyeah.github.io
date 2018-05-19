@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Zane.Xie">
+
+
+
+<meta name="description" content="本文将讲解基于 IntelliJ IDEA 如何使用 IDE 搭建 Hexo 博客、写博客！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）">
+<meta property="og:url" content="http://blog.codesay.top/2017/02/28/Hexo/index.html">
+<meta property="og:site_name" content="Zane`s Blog 随心记录">
+<meta property="og:description" content="本文将讲解基于 IntelliJ IDEA 如何使用 IDE 搭建 Hexo 博客、写博客！">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-a-1.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-a-2.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-b-1.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-b-2.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-b-3.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-b-4.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-c-1.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-c-2.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-c-3.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-d-1.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-d-2.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-d-3.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-e-1.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-e-2.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-e-3.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-e-4.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-f-1.jpg">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-f-2.gif">
+<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-f-3.jpg">
+<meta property="og:updated_time" content="2018-05-19T03:04:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）">
+<meta name="twitter:description" content="本文将讲解基于 IntelliJ IDEA 如何使用 IDE 搭建 Hexo 博客、写博客！">
+<meta name="twitter:image" content="http://img.youmeek.com/2016/hexo-start-a-1.jpg">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Zane`s Blog 随心记录" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>(转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA） | Zane`s Blog 随心记录</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Zane.Xie</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:xzyeah@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BeanValidate/">BeanValidate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitLab/">GitLab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PL-SQL/">PL/SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cron/">cron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python2/">python2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python3/">python3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代码质量/">代码质量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/后台校验/">后台校验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统设计/">系统设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计/">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/重构/">重构</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Zane.Xie</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Zane.Xie</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">博主码农出身，入行十余载，学艺虽不精，但不乏实践思考，在此记录之！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:xzyeah@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/28/Hexo/" class="article-date">
+      <time datetime="2017-02-28T09:58:27.000Z" itemprop="datePublished">2017-02-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        <h1 class="article-title" itemprop="name">
+      (转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）
+    </h1>
+      </header>
+      
+      <div class="article-info article-info-post">
+        <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a><a class="article-category-link" href="/categories/Hexo/IntelliJ-IDEA/">IntelliJ IDEA</a><a class="article-category-link" href="/categories/Hexo/IntelliJ-IDEA/转载/">转载</a>
+    </div>
+        <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
+    </div>
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<h2 id="部署前介绍"><a href="#部署前介绍" class="headerlink" title="部署前介绍"></a>部署前介绍</h2><h3 id="Hexo-是什么"><a href="#Hexo-是什么" class="headerlink" title="Hexo 是什么"></a>Hexo 是什么</h3><ul>
+<li>Hexo 的中文官网：<a href="http://hexo.io/zh-cn/" target="_blank" rel="external">http://hexo.io/zh-cn/</a></li>
+<li>作者 Tommy Chen：<a href="https://zespia.tw/" target="_blank" rel="external">https://zespia.tw/</a></li>
+<li>在我的理解里面：Hexo 是一个基于 Node.js 快速、简洁且高效的博客框架，可以将 Markdown 文件快速的生成静态网页，托管在 GitHub Pages 上。</li>
+<li>而官网自己是这样说的：</li>
+</ul>
+<blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+</blockquote>
+<h3 id="为什么要用-Hexo"><a href="#为什么要用-Hexo" class="headerlink" title="为什么要用 Hexo"></a>为什么要用 Hexo</h3><ul>
+<li>我：因为其他博客框架太烂了</li>
+<li>Tommy Chen：<a href="https://zespia.tw/blog/2012/10/11/hexo-debut/" target="_blank" rel="external">https://zespia.tw/blog/2012/10/11/hexo-debut/</a></li>
+</ul>
+<h3 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h3><ul>
+<li>有 IntelliJ IDEA 基础的程序员（或者你使用的是 JetBrains 家的其他产品）</li>
+<li>只想搭建一个技术博客的人（真心别搞太多，你没那么多精力）</li>
+</ul>
+<h3 id="文章要求"><a href="#文章要求" class="headerlink" title="文章要求"></a>文章要求</h3><ul>
+<li>如果是 Git，Node.js 的新人，则这篇文章不要间断操作，要一气呵成，不然可能会遇到各种问题。</li>
+</ul>
+<h3 id="本文环境"><a href="#本文环境" class="headerlink" title="本文环境"></a>本文环境</h3><ul>
+<li>系统：<ul>
+<li>Windows 10（64 位）</li>
+</ul>
+</li>
+<li>软件：<ul>
+<li>git：<strong>2.7.0.2-64-bit</strong></li>
+<li>IntelliJ IDEA：<strong>15.0.4</strong></li>
+<li>node.js：<strong>v5.7.0-64-bit Stable</strong></li>
+</ul>
+</li>
+<li>账号：<ul>
+<li>Github：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></li>
+<li>DNSPOD：<a href="https://www.dnspod.cn/" target="_blank" rel="external">https://www.dnspod.cn/</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="搭建所需软件"><a href="#搭建所需软件" class="headerlink" title="搭建所需软件"></a>搭建所需软件</h3><ul>
+<li>各个软件官网：<ul>
+<li>git：<a href="http://git-scm.com/" target="_blank" rel="external">http://git-scm.com/</a></li>
+<li>IntelliJ IDEA：<a href="https://www.jetbrains.com/idea/" target="_blank" rel="external">https://www.jetbrains.com/idea/</a></li>
+<li>node.js：<a href="http://nodejs.org/" target="_blank" rel="external">http://nodejs.org/</a></li>
+</ul>
+</li>
+<li>所需软件集合：<ul>
+<li>上面三者集合包：<a href="http://pan.baidu.com/s/1bvbo8e" target="_blank" rel="external">http://pan.baidu.com/s/1bvbo8e</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="文章前提"><a href="#文章前提" class="headerlink" title="文章前提"></a>文章前提</h3><ul>
+<li>如果你对上面要求的软件一个都不了解的话，建议你先看如下内容（只是让你们先了解下，当时别照着文章内容做）：<ul>
+<li><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
+<li><a href="http://www.jianshu.com/p/858ecf233db9" target="_blank" rel="external">通过Hexo在Github上搭建博客教程</a></li>
+<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a></li>
+<li><a href="http://www.jianshu.com/p/701b1095da11" target="_blank" rel="external">手把手教你建github技术博客</a></li>
+<li><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
+<li><a href="http://www.jianshu.com/p/e858a90d0a17" target="_blank" rel="external">windows下搭建hexo博客并将其部署到GitCafe终极教程</a></li>
+<li><a href="http://www.jianshu.com/p/db7e64d86067" target="_blank" rel="external">使用Hexo搭建博客（三），博客配置、主题和写作</a></li>
+<li><a href="http://www.jianshu.com/p/e7413116e9d4" target="_blank" rel="external">Hexo搭建WiKi</a></li>
+<li><a href="https://www.zhihu.com/question/28058973" target="_blank" rel="external">怎么用hexo上传一个README.md到github?</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h3><ul>
+<li>如果你一开始就打算要绑定域名，则下面教程中所有可以填写域名的地方你都填写上你要绑定的域名，如果你没独立域名，那就使用 Github 默认给你的：XXXXXX.github.io 域名即可。</li>
+</ul>
+<hr>
+<h2 id="部署开始"><a href="#部署开始" class="headerlink" title="部署开始"></a>部署开始</h2><h3 id="git-安装"><a href="#git-安装" class="headerlink" title="git 安装"></a>git 安装</h3><ul>
+<li>双击运行 <strong>Git-2.7.0.2-64-bit.exe</strong>，接下来一律下一步，不需要多余的选择，假设你安装的目录位置跟我一样：C:\Program Files\Git</li>
+<li>打开 Git Bash（路径：C:\Program Files\Git\git-bash.exe），输入：<code>git --version</code><ul>
+<li>如下图，如果出现：<strong>git version 2.7.0.windows.2</strong>，这表示安装成功</li>
+<li><img src="http://img.youmeek.com/2016/hexo-start-a-1.jpg" alt="验证 git 安装"></li>
+</ul>
+</li>
+</ul>
+<h3 id="Node-js-安装"><a href="#Node-js-安装" class="headerlink" title="Node.js 安装"></a>Node.js 安装</h3><ul>
+<li>双击运行 <strong>node-v5.7.0-x64.msi</strong>，接下来一律下一步，不需要多余的选择。</li>
+<li>安装完之后，打开 Git Bash，输入：<code>npm -v</code><ul>
+<li>如下图，如果出现：<strong>3.6.0</strong>，则表示 Node.js 安装成功。如果你没有显示这个信息，我怀疑你需要重启电脑试试看，因为我在给我弟讲解这一步的时候发现有这个问题。</li>
+<li><img src="http://img.youmeek.com/2016/hexo-start-a-2.jpg" alt="验证 node.js 安装"></li>
+</ul>
+</li>
+</ul>
+<h3 id="Node-js-源设置"><a href="#Node-js-源设置" class="headerlink" title="Node.js 源设置"></a>Node.js 源设置</h3><ul>
+<li>在安装 Hexo 之前，先说一下 Node.js 的源，Node.js 官方源默认是：<a href="http://registry.npmjs.org" target="_blank" rel="external">http://registry.npmjs.org</a>，但是由于在国外，说不定你使用的时候就抽风无法下载任何软件。所以我们决定暂时使用淘宝提供的源，淘宝源官网：<a href="http://npm.taobao.org/" target="_blank" rel="external">http://npm.taobao.org/</a></li>
+<li>在 Git Bash 中我们执行下面这一句（这是一整句的）：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> cnpm=<span class="string">"npm --registry=https://registry.npm.taobao.org \</span></span><br><span class="line"><span class="string">--cache=<span class="variable">$HOME</span>/.npm/.cache/cnpm \</span></span><br><span class="line"><span class="string">--disturl=https://npm.taobao.org/dist \</span></span><br><span class="line"><span class="string">--userconfig=<span class="variable">$HOME</span>/.cnpmrc"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>现在验证下是否可以使用淘宝的 cnpm 命令：<code>cnpm info express</code><ul>
+<li>如果能输出一大堆介绍，则说明成功了，以后每次要使用淘宝的源都需要这样来。现在除了默认的 <strong>npm</strong>，还多了一个 <strong>cnpm</strong> 可以使用，我们下面有关安装的讲解内容也都是基于此临时命令。</li>
+<li>如果输出：bash: cnpm: command not found，则表示没成功，需要你在排查下</li>
+<li>需要强调的是：<strong>cnpm</strong> 不是永久性命令，只是此时这个界面窗口下的临时命令，关掉窗口就没效果了。</li>
+</ul>
+</li>
+</ul>
+<h3 id="安装-Hexo-框架"><a href="#安装-Hexo-框架" class="headerlink" title="安装 Hexo 框架"></a>安装 Hexo 框架</h3><ul>
+<li>安装 Hexo（注意，现在是 cnpm 开头了，不是 npm 了）：<code>cnpm install -g hexo-cli</code><ul>
+<li>安装时间不一定很快，有可能需要等 3 ~ 5 分钟。</li>
+<li>安装过程中有 WARN 警告也没关系的，不用在意这些 WARN，继续等它安装完成。因为国内的网络问题，有时候安装异常慢花了大半个小时都没效果，那就 Ctrl + C 停掉这次命令，重新再执行一次。</li>
+</ul>
+</li>
+</ul>
+<h3 id="创建-Hexo-项目"><a href="#创建-Hexo-项目" class="headerlink" title="创建 Hexo 项目"></a>创建 Hexo 项目</h3><ul>
+<li>现在假设我要创建一个名为 hexo 的项目，项目目录就放在：E:\git_work_space 目录下，所以我们在 E:\git_work_space 目录下创建一个 hexo 目录。现在这个项目的全路径是：E:\git_work_space\hexo</li>
+<li>打开 Git Bash：<ul>
+<li>进入该目录：<code>cd e:/git_work_space/hexo</code></li>
+<li>然后执行：<code>hexo init</code>，这个时间也会比较长，也有可能要等几分钟，有显示 WARN 也不用管</li>
+<li>最后执行：<code>cnpm install</code>，有显示 WARN 也不用管</li>
+<li>安装完成之后，E:\git_work_space\hexo 目录结构是这样的：<ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-b-1.jpg" alt="安装 hexo 后的目录结构"></li>
+</ul>
+</li>
+<li>现在我们启动 hexo 本地服务，看下默认的博客是怎样的，命令：<code>hexo server</code></li>
+<li>现在用浏览器访问：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>，效果如下图<ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-b-2.jpg" alt="默认模板效果"></li>
+</ul>
+</li>
+<li>如果要停止 hexo 服务：在 Git Bash 下按 <code>Ctrl + C</code> 即可</li>
+</ul>
+</li>
+</ul>
+<h3 id="选用其他主题"><a href="#选用其他主题" class="headerlink" title="选用其他主题"></a>选用其他主题</h3><ul>
+<li>由于默认主题太大众了，所以现在我们换个主题。</li>
+<li>你可以去这里找主题：<ul>
+<li>hexo-theme：<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></li>
+<li>hexo-github-theme-list：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes</a></li>
+<li>有那些好看的hexo主题？：<a href="http://www.zhihu.com/question/24422335" target="_blank" rel="external">http://www.zhihu.com/question/24422335</a></li>
+</ul>
+</li>
+<li>我这里选择的 <strong>yelee</strong>：<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">https://github.com/MOxFIVE/hexo-theme-yelee</a><ul>
+<li>原因是能最大化衬托出：目录、文章内容、代码块。因为我对这个博客的定位就是用来放技术类内容，所以不会让它太杂或是太花。只是目前这个颜色偏浅，后续还需要调整。</li>
+</ul>
+</li>
+<li>现在假设你跟我要用的模板是一样：<ul>
+<li>还是让 Git Bash 保持在 E:\git_work_space\hexo 目录下，然后输入命令：<code>git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee</code></li>
+<li>这样就在 E:\git_work_space\hexo\themes 目录下生成了一个 yelle 文件夹，里面有我们刚刚 clone 下来的主题内容。</li>
+<li>如果以后你不自己修改这个主题的话，可以考虑经常更新下作者的更新内容：<ul>
+<li><code>cd e:/git_work_space/hexo/themes/yelee</code></li>
+<li><code>git pull origin master</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>下载好主题文件之后，我们现在要修改 E:\git_work_space\hexo 目录下的项目配置文件：<strong>_config.yml</strong>，把对应的主题目录名改下，编辑如下图。<ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-b-3.jpg" alt="修改主题目录"></li>
+</ul>
+</li>
+<li>更改主题目录名后，我们还要重新生成主题静态内容：<ul>
+<li>继续在 Git Bash 中输入命令：<ul>
+<li>重新生成静态博客的所有内容：<code>hexo generate</code></li>
+<li>重启 hexo 本地服务：<code>hexo server</code></li>
+<li>重新访问：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>，效果如下图</li>
+<li><img src="http://img.youmeek.com/2016/hexo-start-b-4.jpg" alt="新主题效果"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="创建-Github-pages-并-SSH-授权"><a href="#创建-Github-pages-并-SSH-授权" class="headerlink" title="创建 Github pages 并 SSH 授权"></a>创建 Github pages 并 SSH 授权</h3><ul>
+<li>现在假设你已经有一个 Gtihub 账号，你还需要一个特别的仓库，特别在仓库名就是你的 Github 账号登录名，比如我的用户名是：judasn，那我要创建的仓库名字完整滴填写是：judasn.github.io，具体效果如下图。<ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-c-1.jpg" alt="创建 github pages"></li>
+</ul>
+</li>
+<li>创建好仓库之后，要本地生成 SSH 秘钥，方便电脑上的 git 软件好提交内容到 Github 上<ul>
+<li>在 Git Bash 中，输入：<code>ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</code>，然后回车，回车，再回车，一共 3 次回车，具体含义自己 Google。</li>
+<li>比如我的：<code>ssh-keygen -t rsa -C &quot;jn3.141592654@gmail.com&quot;</code>，生成后效果如下图：</li>
+<li><img src="http://img.youmeek.com/2016/hexo-start-c-2.jpg" alt="生成 ssh 密钥"></li>
+<li>此时，生成密钥后，在你电脑目录：C:\Users\你的计算机用户名\.ssh 下，会生成两个文件：<ul>
+<li>私钥：<strong>id_rsa</strong></li>
+<li>公钥：<strong>id_rsa.pub</strong></li>
+<li>如果生成的不是这样的文件，那删除掉这两个生成的，重新执行上面的命令，让它再一次生成。</li>
+</ul>
+</li>
+<li>现在用记事本打开 id_rsa.pub，复制文件中的所有内容。<ul>
+<li>访问：<a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a>，添加新秘钥，效果如下图<ul>
+<li>Title：自己随便取</li>
+<li>Key：把刚刚复制的都粘贴进来</li>
+<li><img src="http://img.youmeek.com/2016/hexo-start-c-3.jpg" alt="添加密钥"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="把本地的博客内容同步到-Github-上"><a href="#把本地的博客内容同步到-Github-上" class="headerlink" title="把本地的博客内容同步到 Github 上"></a>把本地的博客内容同步到 Github 上</h3><ul>
+<li>要把本地的静态博客同步到 Github，我们还需要先安装两个跟部署相关的 hexo 插件：<ul>
+<li>继续在 Git Bash 中输入：</li>
+<li><code>cnpm install hexo -server --save</code></li>
+<li><code>cnpm install hexo-deployer-git --save</code></li>
+</ul>
+</li>
+<li>编辑全局 hexo 的配置文件：<strong>_config.yml</strong><ul>
+<li>官网对此配置的介绍：<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/configuration.html</a></li>
+<li>我自己的编辑内容初稿（你需要认真看的是含有中文注释的内容）：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexo Configuration</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></span><br><span class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Site，这一块区域主要是设置博客的主要说明，需要注意的是：每个冒号后面都是有一个空格，然后再书写自己的内容的</span></span><br><span class="line">title: YouMeek Code</span><br><span class="line">subtitle: 这里只有代码相关，要了解更多 &gt;&gt;&gt; YouMeek.com</span><br><span class="line">description: 这里是 YouMeek.com 一部分</span><br><span class="line">author: Judas.n</span><br><span class="line">email: 363379444@qq.com</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone:</span><br><span class="line"></span><br><span class="line"><span class="comment"># URL，这一块一般可以设置的是 url 这个参数，比如我要设置绑定域名的，这里就需要填写我的域名信息</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line">url: http://code.youmeek.com</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Directory</span></span><br><span class="line">source_dir: <span class="built_in">source</span></span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Writing</span></span><br><span class="line">new_post_name: :title.md <span class="comment"># File name of new posts</span></span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: <span class="literal">false</span> <span class="comment"># Transform title into titlecase</span></span><br><span class="line">external_link: <span class="literal">true</span> <span class="comment"># Open external links in new tab</span></span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: <span class="literal">false</span></span><br><span class="line">post_asset_folder: <span class="literal">false</span></span><br><span class="line">relative_link: <span class="literal">false</span></span><br><span class="line">future: <span class="literal">true</span></span><br><span class="line">highlight:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  line_number: <span class="literal">true</span></span><br><span class="line">  auto_detect: <span class="literal">false</span></span><br><span class="line">  tab_replace:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Category &amp; Tag</span></span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Date / Time format</span></span><br><span class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"><span class="comment"># Pagination</span></span><br><span class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line">per_page: 10</span><br><span class="line">pagination_dir: page</span><br><span class="line"></span><br><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: yelee</span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## 这里是重点，这里是修改发布地址，因为我们前面已经加了 SSH 密钥信息在 Github 设置里面了，所以只要我们电脑里面持有那两个密钥文件就可以无需密码地跟 Github 做同步。</span></span><br><span class="line"><span class="comment">## 需要注意的是这里的 repo 采用的是 ssh 的地址，而不是 https 的。分支我们默认采用 master 分支，以后你翅膀硬了要换其他也无所谓。</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:judasn/judasn.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<ul>
+<li>编辑全局配置后我们需要重新部署：<ul>
+<li>继续在 Git Bash 中输入命令：</li>
+<li>先清除掉已经生成的旧文件：<code>hexo clean</code></li>
+<li>再生成一次静态文件：<code>hexo generate</code></li>
+<li>在本地预览下：<code>hexo server</code></li>
+<li>本地没问题之后，Ctrl + C 停掉本地预览。</li>
+<li>在部署到 Github 之前，需要先确定你是否已经用过 Git，如果你没用过，则此时你需要做如下设置，在 Git Bash 中依次输入下面两个命令：<ul>
+<li><code>git config --global user.email &quot;你的 Github 注册邮箱地址&quot;</code></li>
+<li><code>git config --global user.name &quot;你的 Github 用户名&quot;</code></li>
+</ul>
+</li>
+<li>使用部署命令部署到 Github 上：<code>hexo deploy</code>，有弹出下面提示框，请输入：<code>yes</code><ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-d-1.jpg" alt="确认提交"></li>
+</ul>
+</li>
+<li>提交成功效果如下：<ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-d-2.jpg" alt="提交成功"></li>
+</ul>
+</li>
+<li>访问服务器地址进行检查：<a href="http://judasn.github.io" target="_blank" rel="external">http://judasn.github.io</a>，效果如下<ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-d-3.jpg" alt="服务器效果"></li>
+</ul>
+</li>
+<li>但是，也不排除你 deploy 不了到 Github，报这个错误：<code>Host key verification failed</code>，那解决办法如下：<ul>
+<li>还是在 Git Bash 界面中，输入如下命令：<code>ssh -T git@github.com</code>，根据界面提示，输入：<code>yes</code> 回车。之后你可以再试一下是否可以 deploy。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>通过上面几次流程我们也就可以总结：以后，每次发表新文章要部署都按这样的流程来：<ul>
+<li><code>hexo clean</code></li>
+<li><code>hexo generate</code></li>
+<li><code>hexo deploy</code></li>
+</ul>
+</li>
+<li>也因为这几个命令太频繁了，所以又有了精简版的命令：<ul>
+<li><code>hexo clean == hexo clean</code></li>
+<li><code>hexo g == hexo generate</code></li>
+<li><code>hexo s == hexo server</code></li>
+<li><code>hexo d == hexo deploy</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><ul>
+<li>绑定域名不排除会遇到很多网络问题或是七七八八，所以这里先提供先官网的一些说明：<ul>
+<li><a href="https://help.github.com/articles/setting-up-your-pages-site-repository/" target="_blank" rel="external">https://help.github.com/articles/setting-up-your-pages-site-repository/</a></li>
+<li><a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/" target="_blank" rel="external">https://help.github.com/articles/quick-start-setting-up-a-custom-domain/</a></li>
+<li><a href="https://help.github.com/articles/setting-up-an-apex-domain/" target="_blank" rel="external">https://help.github.com/articles/setting-up-an-apex-domain/</a></li>
+<li><a href="https://help.github.com/articles/troubleshooting-custom-domains/" target="_blank" rel="external">https://help.github.com/articles/troubleshooting-custom-domains/</a></li>
+<li><a href="https://help.github.com/articles/custom-domain-redirects-for-github-pages-sites/" target="_blank" rel="external">https://help.github.com/articles/custom-domain-redirects-for-github-pages-sites/</a></li>
+</ul>
+</li>
+<li>首先我们要一个 CNAME 文件（文件名叫 CNAME，没有文件后缀的），把该文件放在 E:\git_work_space\hexo\source 目录下，以后一些需要放在根目录的资源文件都可以放这里。如果你找不到这样的文件可以到我的项目上下载：<a href="https://github.com/judasn/judasn.github.io" target="_blank" rel="external">https://github.com/judasn/judasn.github.io</a><ul>
+<li>CNAME 上的内容需要写你具体要绑定的域名信息，比如我是：<strong>code.youmeek.com</strong>，具体你可以参考下图：<ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-e-1.jpg" alt="设置 CNAME 文件"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>接着我们需要到 DNSPOD 上设置域名解析：<a href="https://www.dnspod.cn/" target="_blank" rel="external">https://www.dnspod.cn/</a><ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-e-2.jpg" alt="设置域名解析"></li>
+<li><img src="http://img.youmeek.com/2016/hexo-start-e-3.jpg" alt="设置域名解析"></li>
+</ul>
+</li>
+<li>设置好之后，等过几分钟域名解析好之后，我们访问：<a href="http://code.youmeek.com" target="_blank" rel="external">http://code.youmeek.com</a>，效果如下：    <ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-e-4.jpg" alt="域名访问效果"></li>
+<li>2016-08-19 更新：Github 提示，建议我们使用 CNAME 方式来指向，别用 IP，所以建议你这样配置，还是以我的为例：<ul>
+<li>主机记录：code</li>
+<li>记录类型：CNAME</li>
+<li>记录值：judasn.github.io.（后面的这个点别忘记了）</li>
+<li>还有，要记得把 CNAME 那个文件再 deploy 到 Github 哦，不然还是访问不了的。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="整合-IntelliJ-IDEA-提高效率"><a href="#整合-IntelliJ-IDEA-提高效率" class="headerlink" title="整合 IntelliJ IDEA 提高效率"></a>整合 IntelliJ IDEA 提高效率</h3><ul>
+<li>为了提交写作效率，我个人建议使用 IntelliJ IDEA 作为 Markdown 编辑工具<ul>
+<li>IntelliJ IDEA 有各种各样的快捷键支持你的操作</li>
+<li>IntelliJ IDEA 可以快速地全文检索项目所有的文件</li>
+<li>对 JavaScript、CSS、HTML 等常见语言的良好支持，方便你修改你的主题</li>
+</ul>
+</li>
+<li>如果你还不会使用 IntelliJ IDEA 或是 JetBrains 家其他产品，你可以看下我写一整套教程：<a href="http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/" target="_blank" rel="external">http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/</a></li>
+<li>现在我们用 IntelliJ IDEA 打开我们本地目录：E:\git_work_space\hexo，打开后效果如下图：<ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-f-1.jpg" alt="IntelliJ IDEA 打开项目"></li>
+</ul>
+</li>
+<li>由于 IntelliJ IDEA 在 Windows 下的默认终端是 <code>cmd</code> 不好用，我们现在需要重新修改下 IntelliJ IDEA 的终端工具，把它指向我们习惯的 Git Bash，这样方便操作，如下图 gif 演示。<ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-f-2.gif" alt="IntelliJ IDEA 下操作 hexo"></li>
+<li>如 gif 演示，我们可以 IntelliJ IDEA 里面安心写文章、做发布等操作。</li>
+</ul>
+</li>
+<li>为了更稳定地使用 IntelliJ IDEA，在不修改主题的情况下，我们还需要这样做：<ul>
+<li><img src="http://img.youmeek.com/2016/hexo-start-f-3.jpg" alt="IntelliJ IDEA 下操作 hexo"></li>
+</ul>
+</li>
+<li>hexo 新文章内容的开头需要这样定义：<ul>
+<li>categories：表示文章所属分类</li>
+<li>tags：表示文章所属标签</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 这是文章标题</span><br><span class="line">date: 2016-02-28 17:58:27</span><br><span class="line">categories: [Hexo,IntelliJ IDEA]</span><br><span class="line">tags: [Hexo,IntelliJ IDEA,Git,Github,Node.js]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+<li>我希望从这一篇你也可以再一次了解到 IntelliJ IDEA 的美丽之处。</li>
+<li>最后，欢迎再次来到 IntelliJ IDEA 的世界！</li>
+</ul>
+<ul>
+<li>转自：<a href="http://code.youmeek.com/2016/02/28/2016/02/Hexo/" target="_blank" rel="external">http://code.youmeek.com/2016/02/28/2016/02/Hexo/</a></li>
+</ul>
+      
+    </div>
+    
+  </div>
+  
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/02/28/Hexo/">(转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zane.Xie</a></p>
+        <p><span>发布时间:</span>2017-02-28, 17:58:27</p>
+        <p><span>最后更新:</span>2018-05-19, 11:04:17</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/02/28/Hexo/" title="(转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）">http://blog.codesay.top/2017/02/28/Hexo/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.codesay.top/2017/02/28/Hexo/　　作者: Zane.Xie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/02/28/Hexo-Intensify/">
+                    (转载)搭建 Hexo 博客--增强篇
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/01/14/git-ssh-config/">
+                    Git ssh配置操作指南
+                </a>
+            </div>
+        
+    </nav>
+  
+</article>
+<div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#部署前介绍"><span class="toc-number">1.</span> <span class="toc-text">部署前介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo-是什么"><span class="toc-number">1.1.</span> <span class="toc-text">Hexo 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要用-Hexo"><span class="toc-number">1.2.</span> <span class="toc-text">为什么要用 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#适合人群"><span class="toc-number">1.3.</span> <span class="toc-text">适合人群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文章要求"><span class="toc-number">1.4.</span> <span class="toc-text">文章要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本文环境"><span class="toc-number">1.5.</span> <span class="toc-text">本文环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#搭建所需软件"><span class="toc-number">1.6.</span> <span class="toc-text">搭建所需软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文章前提"><span class="toc-number">1.7.</span> <span class="toc-text">文章前提</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名绑定"><span class="toc-number">1.8.</span> <span class="toc-text">域名绑定</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署开始"><span class="toc-number">2.</span> <span class="toc-text">部署开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-安装"><span class="toc-number">2.1.</span> <span class="toc-text">git 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js-安装"><span class="toc-number">2.2.</span> <span class="toc-text">Node.js 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js-源设置"><span class="toc-number">2.3.</span> <span class="toc-text">Node.js 源设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Hexo-框架"><span class="toc-number">2.4.</span> <span class="toc-text">安装 Hexo 框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建-Hexo-项目"><span class="toc-number">2.5.</span> <span class="toc-text">创建 Hexo 项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选用其他主题"><span class="toc-number">2.6.</span> <span class="toc-text">选用其他主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建-Github-pages-并-SSH-授权"><span class="toc-number">2.7.</span> <span class="toc-text">创建 Github pages 并 SSH 授权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#把本地的博客内容同步到-Github-上"><span class="toc-number">2.8.</span> <span class="toc-text">把本地的博客内容同步到 Github 上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绑定域名"><span class="toc-number">2.9.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#整合-IntelliJ-IDEA-提高效率"><span class="toc-number">2.10.</span> <span class="toc-text">整合 IntelliJ IDEA 提高效率</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">3.</span> <span class="toc-text">结束语</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+    <div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"(转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）　| Zane`s Blog 随心记录　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+    
+
+
+<div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/02/28/Hexo-Intensify/" title="上一篇: (转载)搭建 Hexo 博客--增强篇">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/01/14/git-ssh-config/" title="下一篇: Git ssh配置操作指南">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/28/aliyun-linux-cron任务执行问题解决过程记录与思考/">aliyun linux cron任务执行问题解决过程记录与思考</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/03/python2安装/">python2安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/03/python3安装/">python3安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/31/系统（功能）设计的一些思考——方法篇/">系统（功能）设计的一些思考——方法篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/系统（功能）设计的一些思考——问题篇/">系统（功能）设计的一些思考——问题篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/gitflow应用规范说明/">git flow应用规范说明</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/设计模式之单例模式/">设计模式之单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/14/架构设计原则概述/">架构设计原则概述</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/15/关于代码质量的思考和重构/">关于代码质量的思考和重构</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/redis集群相关概念/">redis集群笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/28/Hexo-Intensify/">(转载)搭建 Hexo 博客--增强篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/28/Hexo/">(转载)使用 Github 空间搭建 Hexo 技术博客--安装篇（基于 IntelliJ IDEA）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/14/git-ssh-config/">Git ssh配置操作指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/12/Git环境搭建及使用指南/">Git环境搭建及使用指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/Hibernate-Bean验证资料/">Hibernate-BeanValidate参考手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/PLSQL入门指南/">PL/SQL入门</a></li></ul>
+
+
+    <script>
+        
+    </script></div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 Zane.Xie
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+<script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide()" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
