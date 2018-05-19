@@ -99,28 +99,6 @@
 
     
   <url>
-    <loc>http://blog.codesay.top/2017/06/03/python2%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2018-05-19T02:40:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>python2安装</title>
-        <pubTime>2017-06-03T06:07:30.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>python2</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://blog.codesay.top/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.codesay.top/2017/06/03/python3%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2018-05-19T02:40:04.000Z</lastmod>
     <data>
@@ -143,19 +121,21 @@
 
     
   <url>
-    <loc>http://blog.codesay.top/2017/03/15/redis%E9%9B%86%E7%BE%A4%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</loc>
+    <loc>http://blog.codesay.top/2017/06/03/python2%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2018-05-19T02:40:04.000Z</lastmod>
     <data>
         <display>
-        <title>redis集群笔记</title>
-        <pubTime>2017-03-15T03:07:30.000Z</pubTime>
+        <title>python2安装</title>
+        <pubTime>2017-06-03T06:07:30.000Z</pubTime>
         
-        <tag>redis</tag>
+        <tag>python</tag>
+         
+        <tag>python2</tag>
          
          
            
              
-              <breadCrumb title="缓存" url="http://blog.codesay.top/categories/%E7%BC%93%E5%AD%98/"/>
+              <breadCrumb title="python" url="http://blog.codesay.top/categories/python/"/>
           
         </display>
     </data>
@@ -207,21 +187,41 @@
 
     
   <url>
-    <loc>http://blog.codesay.top/2016/11/15/PLSQL%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</loc>
+    <loc>http://blog.codesay.top/2017/03/15/redis%E9%9B%86%E7%BE%A4%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</loc>
     <lastmod>2018-05-19T02:40:04.000Z</lastmod>
     <data>
         <display>
-        <title>PL/SQL入门</title>
-        <pubTime>2016-11-15T03:07:30.000Z</pubTime>
+        <title>redis集群笔记</title>
+        <pubTime>2017-03-15T03:07:30.000Z</pubTime>
         
-        <tag>Oracle</tag>
-         
-        <tag>PL/SQL</tag>
+        <tag>redis</tag>
          
          
            
              
-              <breadCrumb title="数据库" url="http://blog.codesay.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+              <breadCrumb title="缓存" url="http://blog.codesay.top/categories/%E7%BC%93%E5%AD%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.codesay.top/2016/12/12/Hibernate-Bean%E9%AA%8C%E8%AF%81%E8%B5%84%E6%96%99/</loc>
+    <lastmod>2018-05-19T02:40:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hibernate-BeanValidate参考手册</title>
+        <pubTime>2016-12-12T10:07:30.000Z</pubTime>
+        
+        <tag>后台校验</tag>
+         
+        <tag>BeanValidate</tag>
+         
+         
+           
+             
+              <breadCrumb title="BeanValidate" url="http://blog.codesay.top/categories/BeanValidate/"/>
           
         </display>
     </data>
@@ -314,21 +314,21 @@
 
     
   <url>
-    <loc>http://blog.codesay.top/2016/12/12/Hibernate-Bean%E9%AA%8C%E8%AF%81%E8%B5%84%E6%96%99/</loc>
+    <loc>http://blog.codesay.top/2016/11/15/PLSQL%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2018-05-19T02:40:04.000Z</lastmod>
     <data>
         <display>
-        <title>Hibernate-BeanValidate参考手册</title>
-        <pubTime>2016-12-12T10:07:30.000Z</pubTime>
+        <title>PL/SQL入门</title>
+        <pubTime>2016-11-15T03:07:30.000Z</pubTime>
         
-        <tag>后台校验</tag>
+        <tag>Oracle</tag>
          
-        <tag>BeanValidate</tag>
+        <tag>PL/SQL</tag>
          
          
            
              
-              <breadCrumb title="BeanValidate" url="http://blog.codesay.top/categories/BeanValidate/"/>
+              <breadCrumb title="数据库" url="http://blog.codesay.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
           
         </display>
     </data>
